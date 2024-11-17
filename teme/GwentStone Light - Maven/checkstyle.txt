@@ -1,1 +1,5 @@
-Error: Unable to access jarfile src/checker/checkstyle-8.36.2-all.jar
+Starting audit...
+[ERROR] /home/artiom/teme_anul_2/oop-asignments/teme/GwentStone Light - Maven/./src/main/java/org/poo/cards/HeroCard.java:18:5: Class 'HeroCard' looks like designed for extension (can be subclassed), but the method 'isOffensive' does not have javadoc that explains how to do that safely. If class is not designed for extension consider making the class 'HeroCard' final or making the method 'isOffensive' static/final/abstract/empty, or adding allowed annotation for the method. [DesignForExtension]
+[ERROR] /home/artiom/teme_anul_2/oop-asignments/teme/GwentStone Light - Maven/./src/main/java/org/poo/cards/HeroCard.java:18:5: Missing a Javadoc comment. [MissingJavadocMethod]
+Audit done.
+Checkstyle ends with 2 errors.
