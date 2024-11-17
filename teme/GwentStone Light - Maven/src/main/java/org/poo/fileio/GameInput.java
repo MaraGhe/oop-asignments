@@ -6,9 +6,6 @@ public final class GameInput {
         private StartGameInput startGame;
         private ArrayList<ActionsInput> actions;
 
-        public GameInput() {
-        }
-
         public StartGameInput getStartGame() {
                 return startGame;
         }

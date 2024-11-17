@@ -1,11 +1,9 @@
 package org.poo.fileio;
 
-import java.util.ArrayList;
-
 public final class DecksInput {
     private int nrCardsInDeck;
     private int nrDecks;
-    private ArrayList<ArrayList<CardInput>> decks;
+    private CardInput[][] decks;
 
     public DecksInput() {
     }
@@ -26,11 +24,11 @@ public final class DecksInput {
         this.nrDecks = nrDecks;
     }
 
-    public ArrayList<ArrayList<CardInput>> getDecks() {
+    public CardInput[][] getDecks() {
         return decks;
     }
 
-    public void setDecks(final ArrayList<ArrayList<CardInput>> decks) {
+    public void setDecks(final CardInput[][] decks) {
         this.decks = decks;
     }
 
