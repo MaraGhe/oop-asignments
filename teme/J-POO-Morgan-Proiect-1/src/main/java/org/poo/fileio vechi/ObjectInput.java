@@ -9,5 +9,5 @@ public final class ObjectInput {
     private UserInput[] users;
     private ExchangeInput[] exchangeRates;
     private CommandInput[] commands;
-    private MerchantInput[] merchants;
+    private CommerciantInput[] commerciants;
 }
