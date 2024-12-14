@@ -2,14 +2,15 @@ package org.poo.cards;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ObjectNode;
+import org.poo.utils.Utils;
 
 public class Card {
-    private String cardNumber;
-    private String status;
+    protected String cardNumber;
+    protected String status;
 
-    public Card(String status, String cardNumber) {
-        this.status = status;
-        this.cardNumber = cardNumber;
+    public Card() {
+        cardNumber = Utils.generateCardNumber();
+        status = "active";
     }
 
     public ObjectNode toJson() {

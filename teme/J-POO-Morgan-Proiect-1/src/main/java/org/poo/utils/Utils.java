@@ -3,7 +3,7 @@ package org.poo.utils;
 import java.util.Random;
 
 public final class Utils {
-    private Utils() {
+    public Utils() {
         // Checkstyle error free constructor
     }
 

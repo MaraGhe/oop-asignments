@@ -1,10 +1,12 @@
-package org.poo.operands.accounts;
+package org.poo.people.accounts;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ArrayNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 import org.poo.cards.Card;
+import org.poo.fileio.CommandInput;
 import org.poo.transactions.Transaction;
+import org.poo.utils.Utils;
 
 import java.util.ArrayList;
 
@@ -14,21 +16,25 @@ public class Account {
     private double balance;
     private String currency;
     private String accountType;
-    private double minBalance;
+    private double minBalance = -1;
     private ArrayList<Card> cards;
     private ArrayList<Transaction> transactions;
 
     public Account(String alias, String IBAN, double balance, String currency,
-                   String accountType, double minBalance, ArrayList<Card> cards,
+                   String accountType, ArrayList<Card> cards,
                    ArrayList<Transaction> transactions) {
         this.alias = alias;
         this.IBAN = IBAN;
         this.balance = balance;
         this.currency = currency;
         this.accountType = accountType;
-        this.minBalance = minBalance;
         this.cards = cards;
         this.transactions = transactions;
+    }
+
+    public Account (CommandInput input) {
+        this(null, Utils.generateIBAN(), 0, input.getCurrency(),
+                input.getAccountType(), new ArrayList<>(), new ArrayList<>());
     }
 
     public ObjectNode convertJSON() {

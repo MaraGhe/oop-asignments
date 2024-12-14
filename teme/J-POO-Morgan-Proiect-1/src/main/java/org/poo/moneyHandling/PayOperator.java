@@ -1,8 +1,8 @@
-package org.poo.operators;
+package org.poo.moneyHandling;
 
-import org.poo.operands.accounts.Account;
+import org.poo.people.accounts.Account;
 
-public class PayOperator implements Operator {
+public class PayOperator implements MoneyHandler {
     public boolean allowOperation(Account account, double amount) {
         if (account.getBalance() <= amount)
             return true;

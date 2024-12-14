@@ -1,8 +1,8 @@
-package org.poo.operators;
+package org.poo.moneyHandling;
 
-import org.poo.operands.accounts.Account;
+import org.poo.people.accounts.Account;
 
-public interface Operator {
+public interface MoneyHandler {
     public boolean allowOperation(Account account, double amount);
     public void operate(Account account, double amount);
 }

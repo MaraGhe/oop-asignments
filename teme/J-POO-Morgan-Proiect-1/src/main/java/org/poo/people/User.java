@@ -1,10 +1,10 @@
-package org.poo.operands;
+package org.poo.people;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ArrayNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 import org.poo.fileio.UserInput;
-import org.poo.operands.accounts.Account;
+import org.poo.people.accounts.Account;
 import org.poo.transactions.Transaction;
 import java.util.ArrayList;
 
